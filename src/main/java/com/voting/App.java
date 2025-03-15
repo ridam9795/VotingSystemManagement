@@ -6,7 +6,6 @@ import com.voting.service.CandidateManagerService;
 import com.voting.service.VoterManagerService;
 import com.voting.service.VotingBoothManagerService;
 import com.voting.entity.VotingBooth;
-import com.voting.service.VotingSystemManagerService;
 
 import java.util.Arrays;
 import java.util.List;
@@ -63,10 +62,9 @@ public class App
 
 
 
-        VotingSystemManagerService votingSystemManagerService=new VotingSystemManagerService(votingBoothManagerService,voterManagerService,candidateManagerService);
-        System.out.println("All Votings booths "+votingSystemManagerService.getAllVotingBooths());
-        System.out.println("All Candidates  "+votingSystemManagerService.getAllCandidates());
-        System.out.println("All Voters "+votingSystemManagerService.getAllVoters());
+        System.out.println("All Votings booths "+votingBoothManagerService.getVotingBoothList());
+        System.out.println("All Candidates  "+candidateManagerService.getCandidateList());
+        System.out.println("All Voters "+voterManagerService.getVoterList());
 
 
 

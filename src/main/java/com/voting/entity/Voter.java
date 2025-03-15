@@ -1,8 +1,10 @@
 package com.voting.entity;
 
 import lombok.Getter;
+import lombok.Setter;
 
 @Getter
+@Setter
 public class Voter {
     private String voterId;
     private String voterName;
@@ -13,13 +15,6 @@ public class Voter {
         this.voterName = voterName;
     }
 
-    public VotingBooth getVotingBooth() {
-        return votingBooth;
-    }
-
-    public void setVotingBooth(VotingBooth votingBooth) {
-        this.votingBooth = votingBooth;
-    }
 
     @Override
     public String toString() {

@@ -1,8 +1,10 @@
 package com.voting.entity;
 
 import lombok.Getter;
+import lombok.Setter;
 
 @Getter
+@Setter
 public class Candidate{
     private String voterId;
     private String candidateId;

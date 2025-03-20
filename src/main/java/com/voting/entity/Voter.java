@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Voter {
+public class Voter implements VotingComponent{
     private String voterId;
     private String voterName;
     public VotingBooth votingBooth;
@@ -15,7 +15,6 @@ public class Voter {
         this.voterName = voterName;
     }
 
-
     @Override
     public String toString() {
         return "Voter{" +
@@ -23,5 +22,10 @@ public class Voter {
                 ", voterName='" + voterName + '\'' +
                 ", votingBooth=" + votingBooth +
                 '}';
+    }
+
+    @Override
+    public void showDetails() {
+        System.out.println("Voter: "+this);
     }
 }

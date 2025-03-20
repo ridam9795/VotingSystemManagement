@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Candidate{
+public class Candidate implements VotingComponent{
     private String voterId;
     private String candidateId;
     private String candidateName;
@@ -26,5 +26,10 @@ public class Candidate{
                 ", candidateName='" + candidateName + '\'' +
                 ", votingBooth=" + votingBooth +
                 '}';
+    }
+
+    @Override
+    public void showDetails() {
+        System.out.println("Candidates: "+this);
     }
 }

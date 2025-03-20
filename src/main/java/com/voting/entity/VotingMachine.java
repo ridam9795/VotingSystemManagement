@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class VotingMachine {
+public class VotingMachine implements VotingComponent{
     private String votingMachineId;
     private VotingBooth votingBooth;
 
@@ -20,4 +20,9 @@ public class VotingMachine {
                 ", votingBooth=" + votingBooth +
                 '}';
     }
+    @Override
+    public void showDetails() {
+        System.out.println("VotingMachine: "+this);
+    }
+
 }

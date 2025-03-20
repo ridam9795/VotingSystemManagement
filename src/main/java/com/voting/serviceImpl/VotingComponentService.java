@@ -7,10 +7,13 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class VotingComponentService implements VotingComponent {
+    String votingPlaceId;
     List<VotingComponent> votingComponentList;
 
-    public VotingComponentService() {
+    public VotingComponentService(String votingPlaceId) {
         this.votingComponentList = new ArrayList<>();
+        this.votingPlaceId=votingPlaceId;
+
     }
 
     public void addVotingComponent(VotingComponent votingComponent){

@@ -17,12 +17,13 @@ public class App
 {
     public static void main( String[] args )
     {
-        VotingComponentService votingComponentService=new VotingComponentService();
+        String key="UP"+"-"+"Varanasi";
+        VotingComponentService varanasiVotingService=new VotingComponentService(key);
 
         VotingBooth sarnath=new VotingBooth("Sarnath");
         VotingBooth rajghat=new VotingBooth("Rajghat");
         VotingBooth dlw=new VotingBooth("DLW");
-        votingComponentService.addAllVotingComponents(Arrays.asList(sarnath,rajghat,dlw));
+        varanasiVotingService.addAllVotingComponents(Arrays.asList(sarnath,rajghat,dlw));
 
 
         Voter arun=new Voter("1","arun");
@@ -46,20 +47,20 @@ public class App
         akhilesh.setVotingBooth(dlw);
 
         List<VotingComponent> votersList=Arrays.asList(akhilesh,modi,yogi,arun,varun,tarun,karan,akhil,ram);
-        votingComponentService.addAllVotingComponents(votersList);
+        varanasiVotingService.addAllVotingComponents(votersList);
 
 
         Candidate candidateModi=new Candidate(modi,"c-modi");
         Candidate candidateYogi=new Candidate( yogi,"c-yogi");
         Candidate candidateAkhilesh=new Candidate(akhilesh,"c-akhilesh");
         List<VotingComponent> candidateList=Arrays.asList(candidateModi,candidateYogi,candidateAkhilesh);
-        votingComponentService.addAllVotingComponents(candidateList);
+        varanasiVotingService.addAllVotingComponents(candidateList);
 
         System.out.println("--------------------------- Voting components -----------------------");
-        votingComponentService.showDetails();
-        System.out.println("Voting List :"+votingComponentService.fetchList(Voter.class));
-        System.out.println("Candidate List :"+votingComponentService.fetchList(Candidate.class));
-        System.out.println("Voting Booth List :"+votingComponentService.fetchList(VotingBooth.class));
+        varanasiVotingService.showDetails();
+        System.out.println("Voting List :"+varanasiVotingService.fetchList(Voter.class));
+        System.out.println("Candidate List :"+varanasiVotingService.fetchList(Candidate.class));
+        System.out.println("Voting Booth List :"+varanasiVotingService.fetchList(VotingBooth.class));
 
 
 

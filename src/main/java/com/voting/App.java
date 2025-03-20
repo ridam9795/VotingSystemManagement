@@ -57,6 +57,7 @@ public class App
         varanasiVotingService.addAllVotingComponents(candidateList);
 
         System.out.println("--------------------------- Voting components -----------------------");
+        System.out.println("Voting place "+varanasiVotingService.getVotingPlaceId());
         varanasiVotingService.showDetails();
         System.out.println("Voting List :"+varanasiVotingService.fetchList(Voter.class));
         System.out.println("Candidate List :"+varanasiVotingService.fetchList(Candidate.class));

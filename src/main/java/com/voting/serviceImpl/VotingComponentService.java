@@ -1,11 +1,13 @@
 package com.voting.serviceImpl;
 
 import com.voting.entity.VotingComponent;
+import lombok.Getter;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Getter
 public class VotingComponentService implements VotingComponent {
     String votingPlaceId;
     List<VotingComponent> votingComponentList;

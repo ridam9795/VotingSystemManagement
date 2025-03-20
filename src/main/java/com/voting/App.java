@@ -19,39 +19,39 @@ public class App
     {
         VotingComponentService votingComponentService=new VotingComponentService();
 
-        VotingComponent sarnath=new VotingBooth("Sarnath");
-        VotingComponent rajghat=new VotingBooth("Rajghat");
-        VotingComponent dlw=new VotingBooth("DLW");
+        VotingBooth sarnath=new VotingBooth("Sarnath");
+        VotingBooth rajghat=new VotingBooth("Rajghat");
+        VotingBooth dlw=new VotingBooth("DLW");
         votingComponentService.addAllVotingComponents(Arrays.asList(sarnath,rajghat,dlw));
 
 
-        VotingComponent arun=new Voter("1","arun");
-        VotingComponent varun=new Voter("2","varun");
-        VotingComponent tarun=new Voter("3","tarun");
-        VotingComponent karan=new Voter("4","karan");
-        VotingComponent akhil=new Voter("5","akhil");
-        VotingComponent ram=new Voter("6","ram");
-        VotingComponent modi=new Voter("7","Modi");
-        VotingComponent yogi=new Voter("8","Yogi");
-        VotingComponent akhilesh=new Voter("9","Akhilesh");
+        Voter arun=new Voter("1","arun");
+        Voter varun=new Voter("2","varun");
+        Voter tarun=new Voter("3","tarun");
+        Voter karan=new Voter("4","karan");
+        Voter akhil=new Voter("5","akhil");
+        Voter ram=new Voter("6","ram");
+        Voter modi=new Voter("7","Modi");
+        Voter yogi=new Voter("8","Yogi");
+        Voter akhilesh=new Voter("9","Akhilesh");
 
-        ((Voter) arun).setVotingBooth((VotingBooth) sarnath);
-        ((Voter) varun).setVotingBooth((VotingBooth) sarnath);
-        ((Voter) tarun).setVotingBooth((VotingBooth) rajghat);
-        ((Voter) karan).setVotingBooth((VotingBooth) rajghat);
-        ((Voter) akhil).setVotingBooth((VotingBooth) rajghat);
-        ((Voter) ram).setVotingBooth((VotingBooth) dlw);
-        ((Voter) modi).setVotingBooth((VotingBooth) sarnath);
-        ((Voter) yogi).setVotingBooth((VotingBooth) rajghat);
-        ((Voter) akhilesh).setVotingBooth((VotingBooth) dlw);
+        arun.setVotingBooth(sarnath);
+        varun.setVotingBooth(sarnath);
+        tarun.setVotingBooth(rajghat);
+        karan.setVotingBooth(rajghat);
+        akhil.setVotingBooth(rajghat);
+        ram.setVotingBooth(dlw);
+        modi.setVotingBooth(sarnath);
+        yogi.setVotingBooth(rajghat);
+        akhilesh.setVotingBooth(dlw);
 
         List<VotingComponent> votersList=Arrays.asList(akhilesh,modi,yogi,arun,varun,tarun,karan,akhil,ram);
         votingComponentService.addAllVotingComponents(votersList);
 
 
-        VotingComponent candidateModi=new Candidate((Voter) modi,"c-modi");
-        VotingComponent candidateYogi=new Candidate((Voter) yogi,"c-yogi");
-        VotingComponent candidateAkhilesh=new Candidate((Voter) akhilesh,"c-akhilesh");
+        Candidate candidateModi=new Candidate(modi,"c-modi");
+        Candidate candidateYogi=new Candidate( yogi,"c-yogi");
+        Candidate candidateAkhilesh=new Candidate(akhilesh,"c-akhilesh");
         List<VotingComponent> candidateList=Arrays.asList(candidateModi,candidateYogi,candidateAkhilesh);
         votingComponentService.addAllVotingComponents(candidateList);
 

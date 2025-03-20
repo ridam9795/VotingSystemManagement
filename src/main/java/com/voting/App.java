@@ -26,25 +26,16 @@ public class App
         varanasiVotingService.addAllVotingComponents(Arrays.asList(sarnath,rajghat,dlw));
 
 
-        Voter arun=new Voter("1","arun");
-        Voter varun=new Voter("2","varun");
-        Voter tarun=new Voter("3","tarun");
-        Voter karan=new Voter("4","karan");
-        Voter akhil=new Voter("5","akhil");
-        Voter ram=new Voter("6","ram");
-        Voter modi=new Voter("7","Modi");
-        Voter yogi=new Voter("8","Yogi");
-        Voter akhilesh=new Voter("9","Akhilesh");
+        Voter arun=new Voter("1","arun",sarnath);
+        Voter varun=new Voter("2","varun",sarnath);
+        Voter tarun=new Voter("3","tarun",rajghat);
+        Voter karan=new Voter("4","karan",rajghat);
+        Voter akhil=new Voter("5","akhil",rajghat);
+        Voter ram=new Voter("6","ram",dlw);
+        Voter modi=new Voter("7","Modi",sarnath);
+        Voter yogi=new Voter("8","Yogi",rajghat);
+        Voter akhilesh=new Voter("9","Akhilesh",dlw);
 
-        arun.setVotingBooth(sarnath);
-        varun.setVotingBooth(sarnath);
-        tarun.setVotingBooth(rajghat);
-        karan.setVotingBooth(rajghat);
-        akhil.setVotingBooth(rajghat);
-        ram.setVotingBooth(dlw);
-        modi.setVotingBooth(sarnath);
-        yogi.setVotingBooth(rajghat);
-        akhilesh.setVotingBooth(dlw);
 
         List<VotingComponent> votersList=Arrays.asList(akhilesh,modi,yogi,arun,varun,tarun,karan,akhil,ram);
         varanasiVotingService.addAllVotingComponents(votersList);

@@ -10,9 +10,10 @@ public class Voter implements VotingComponent{
     private String voterName;
     public VotingBooth votingBooth;
 
-    public Voter(String voterId, String voterName) {
+    public Voter(String voterId, String voterName,VotingBooth votingBooth) {
         this.voterId = voterId;
         this.voterName = voterName;
+        this.votingBooth=votingBooth;
     }
 
     @Override
